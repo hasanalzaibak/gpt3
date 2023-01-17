@@ -55,13 +55,13 @@ const Header = () => {
         variants={listLeft}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true }}
+        viewport={{ once: true, margin:'-200px' }}
         className='gpt3__header-content'>
         <m.h1
           variants={listTitle}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true, margin:'-200px' }}
           className='gradient__text'>
           Let's Build Something Amazing With GPT-3 OpenAI
         </m.h1>
@@ -80,7 +80,7 @@ const Header = () => {
         variants={listRight}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true }}
+        viewport={{ once: true, margin:'-200px' }}
         className='gpt3__header-image'>
         <img src={ai} alt='ai' />
       </m.div>

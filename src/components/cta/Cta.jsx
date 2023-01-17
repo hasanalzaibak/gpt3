@@ -23,7 +23,7 @@ const Cta = () => {
       variants={list}
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true }}
+      viewport={{ once: true, margin:'-200px' }}
       className='gpt3__cta'>
       <div className='gpt3__cta-content'>
         <p>Request Early Access to Get Started</p>

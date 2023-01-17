@@ -57,7 +57,7 @@ const Blog = () => {
         variants={list}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true }}
+        viewport={{ once: true, margin:'-200px' }}
         className='gpt3__blog-heading'>
         <h1 className='gradient__text'>A lot is happening,
           We are blogging about it.</h1>
@@ -69,7 +69,7 @@ const Blog = () => {
           variants={listLeft}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true, margin:'-200px' }}
           className='gpt3__blog-container_groupA'>
           <Article imgURL={blog01} title={title} date={date} />
         </m.div>
@@ -77,7 +77,7 @@ const Blog = () => {
           variants={listRight}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true, margin:'-200px' }}
           className='gpt3__blog-container_groupB'>
           <Article imgURL={blog02} title={title} date={date} />
           <Article imgURL={blog03} title={title} date={date} />

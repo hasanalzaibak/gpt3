@@ -24,7 +24,7 @@ const Brand = () => {
       variants={list}
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true }}
+      viewport={{ once: true, margin:'-200px' }}
       className='gpt3__brand section__padding'>
       <m.div variants={list}>
         <img src={google} alt='google' />

@@ -37,7 +37,7 @@ const Possibility = () => {
         variants={listLeft}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true }}
+        viewport={{ once: true, margin:'-200px' }}
         className='gpt3__possibility-image'>
         <img src={possibility} alt="possibility" />
       </m.div>
@@ -45,7 +45,7 @@ const Possibility = () => {
         variants={listRight}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true }}
+        viewport={{ once: true, margin:'-200px' }}
         className='gpt3__possibility-content'>
         <h4>Request Early Access to Get Started</h4>
         <h1 className='gradient__text'>The possibilities are beyond your imagination</h1>

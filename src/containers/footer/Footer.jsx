@@ -23,7 +23,7 @@ const Footer = () => {
       variants={list}
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true }}
+      viewport={{ once: true, margin:'-200px' }}
       className='gpt3__footer section__padding'>
       <m.div
         variants={list}
