@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .gpt3__brand div {
@@ -13,4 +15,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 990px) {
+    .gpt3__brand {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }

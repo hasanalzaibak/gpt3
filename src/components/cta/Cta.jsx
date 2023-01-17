@@ -1,8 +1,30 @@
 import './cta.css'
+import { motion as m } from 'framer-motion'
+
+const list = {
+  hidden: {
+    opacity: 0,
+    y: 50
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.5
+    }
+
+  }
+}
 
 const Cta = () => {
   return (
-    <div className='gpt3__cta'>
+    <m.div
+      variants={list}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+      className='gpt3__cta'>
       <div className='gpt3__cta-content'>
         <p>Request Early Access to Get Started</p>
         <h3>Register today & start exploring the endless possiblities.</h3>
@@ -10,7 +32,7 @@ const Cta = () => {
       <div className='gpt3__cta-btn'>
         <button type="button">Get Started</button>
       </div>
-    </div>
+    </m.div>
   )
 }
 

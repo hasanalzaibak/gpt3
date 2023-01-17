@@ -1,5 +1,6 @@
 import './features.css'
 import Feature from '../../components/feature/Feature'
+import { motion as m } from "framer-motion"
 
 const featuresData = [
   {
@@ -20,20 +21,58 @@ const featuresData = [
   }
 ]
 
-const featuresMap = featuresData.map( (data, index) => {
+const featuresMap = featuresData.map((data, index) => {
   return <Feature id={index} title={data.title} text={data.text} />
 })
+
+const listLeft = {
+  hidden: {
+    opacity: 0,
+    x: -50
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    }
+  }
+}
+
+const listRight = {
+  hidden: {
+    opacity: 0,
+    x: 50
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1
+    }
+  }
+}
 
 const Features = () => {
   return (
     <div className='gpt3__features section__padding' id='features'>
-      <div className='gpt3__features-heading'>
+      <m.div
+        variants={listLeft}
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true }}
+        className='gpt3__features-heading'>
         <h1 className='gradient__text'>The Future is Now and You Just Need To Realize It. Step into Future Today & Make it Happen.</h1>
         <p>Request Early Access to Get Started</p>
-      </div>
-      <div className='gpt3__features-container'>
-          {featuresMap}
-      </div>
+      </m.div>
+      <m.div
+        variants={listRight}
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true }}
+        className='gpt3__features-container'>
+        {featuresMap}
+      </m.div>
     </div>
   )
 }

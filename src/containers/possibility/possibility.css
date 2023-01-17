@@ -1,7 +1,7 @@
 .gpt3__possibility {
     display: flex;
     justify-content: space-evenly;
-    margin-top: -3rem;
+    margin-top: 4rem;
 }
 
 .gpt3__possibility-image {
@@ -63,6 +63,7 @@
 @media screen and (max-width: 950px) {
     .gpt3__possibility {
         flex-direction: column;
+        margin-top: 0;
     }
     .gpt3__possibility-image {
         margin: 1rem 0;
